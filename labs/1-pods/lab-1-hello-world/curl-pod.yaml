@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: curl
+  namespace: default
+  labels:
+    name: curl
+spec:
+  containers:
+  - name: curl
+    # about curlimages/curl: https://hub.docker.com/r/curlimages/curl
+    image: curlimages/curl:7.69.1
+    # see https://github.com/kubernetes/kubernetes/blob/5c903dbcacb423158e3f363bcbb27eef58f95218/docs/user-guide/containers.md#containers-and-commands for detailed explanation of command vs args
+    command: 
+    - /bin/sh
+    args:
+    - -c
+    - "echo 'hello world from curlimages/curl: going to sleep now!!!'; while true; do sleep 5; done;"
+
+    

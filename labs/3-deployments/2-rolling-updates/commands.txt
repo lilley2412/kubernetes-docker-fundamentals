@@ -1,0 +1,19 @@
+kubectl delete all -l lab 
+
+kubectl apply -f _prior_labs/.
+
+kubectl get pods -o wide | awk {'print $1" " $2" " $3" " $6" " $5'} | column -t
+
+kubectl rollout history deployment nginx-deployment
+
+kubectl apply -f update-deployment.yaml
+
+kubectl get rs
+
+kubectl get pods -o wide | awk {'print $1" " $2" " $3" " $6" " $5'} | column -t
+
+kubectl exec curl -- curl -s nginx-deployment-nodeport
+
+kubectl rollout history deployment nginx-deployment
+
+kubectl rollout undo deployment nginx-deployment

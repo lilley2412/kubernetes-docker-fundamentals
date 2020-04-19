@@ -1,0 +1,15 @@
+kubectl apply -f curl.yaml
+
+kubectl get pods 
+
+kubectl logs curl 
+
+kubectl get pods -o wide
+
+kubectl get pods -o yaml
+
+
+
+
+
+

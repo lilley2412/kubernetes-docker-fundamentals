@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: default
+  labels:
+    name: nginx-pod
+    app: nginx-pod
+    lab: svc-1-nginx-pod-2-pod
+spec:
+  containers:
+  - name: nginx-pod
+    image: nginxdemos/hello:plain-text
+    ports:
+      - containerPort: 80

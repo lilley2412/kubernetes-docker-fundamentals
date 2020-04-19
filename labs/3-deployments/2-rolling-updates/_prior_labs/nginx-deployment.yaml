@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    lab: dep-1-deployment
+spec:
+  replicas: 4
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: nginx-deployment
+  template:
+    metadata:
+      labels:
+        app: nginx-deployment
+        lab: dep-1-deployment
+    spec:
+      containers:
+      - name: nginx-deployment
+        image: nginxdemos/hello:plain-text
+        ports:
+          - containerPort: 80

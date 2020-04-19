@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: echo-deployment
+  template:
+    metadata:
+      labels:
+        app: echo-deployment
+        lab: dep-N-TODO
+    spec:
+      containers:
+      - name: echo-deployment
+        image: hashicorp/http-echo
+        ports:
+          - containerPort: 5678

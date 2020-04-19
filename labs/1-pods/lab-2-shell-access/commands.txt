@@ -1,0 +1,11 @@
+kubectl exec -it curl -- sh
+
+ps
+
+ifconfig
+
+curl -s -I https://www.google.com
+
+env
+
+cat /etc/resolv.conf
