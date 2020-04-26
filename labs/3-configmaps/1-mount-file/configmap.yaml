@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lab3-1
+  namespace: default
+  labels:
+    name: lab3-1
+    app: lab3-1
+    lab: lab3-1
+data:
+  hello-plain-text.conf: |
+    server {
+        listen 80;
+
+        location / {
+            default_type text/plain;
+            expires -1;
+            return 200 'Configured via Configmap\nYour IP Address: $remote_addr\nServer address: $server_addr:$server_port\nServer name: $hostname\nDate: $time_local\nURI: $request_uri\nRequest ID: $request_id\n';
+        }
+    }

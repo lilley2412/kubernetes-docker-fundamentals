@@ -2,7 +2,7 @@ kubectl delete all -l lab
 
 kubectl apply -f .
 
-kc get deployments,rs
+kubectl get deployments,rs
 
 kubectl get pods -o wide | awk {'print $1" " $2" " $3" " $6" " $5'} | column -t
 
@@ -11,3 +11,5 @@ kubectl get svc
 kubectl exec curl -- curl -s nginx-deployment-nodeport
 
 kubectl delete pods -l app=nginx-deployment
+
+kubectl get pods -o wide | awk {'print $1" " $2" " $3" " $6" " $5'} | column -t
