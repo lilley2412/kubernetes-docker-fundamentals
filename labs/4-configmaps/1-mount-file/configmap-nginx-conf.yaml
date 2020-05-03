@@ -1,10 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: lab4-1
+  name: lab4-1-nginx-conf
   namespace: default
   labels:
-    name: lab4-1
     lab: lab4-1
 data:
   hello-plain-text.conf: |

@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: lab2-1
+  name: lab2-1-nginx
   namespace: default
   labels:
-    name: lab2-1
     lab: lab2-1
+    app: nginx-plain-text
 spec:
   containers:
-  - name: nginx-pod
+  - name: nginx
     image: nginxdemos/hello:plain-text
     ports:
       - containerPort: 80

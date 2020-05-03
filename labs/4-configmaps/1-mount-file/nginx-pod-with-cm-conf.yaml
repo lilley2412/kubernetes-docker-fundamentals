@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: lab4-1
+  name: lab4-1-nginx
   namespace: default
   labels:
-    name: lab4-1
     lab: lab4-1
+    app: nginx-plain-text
 spec:
   containers:
   - name: nginx
@@ -19,4 +19,4 @@ spec:
   volumes:
     - name: conf
       configMap:
-          name: lab4-1
+          name: lab4-1-nginx-conf

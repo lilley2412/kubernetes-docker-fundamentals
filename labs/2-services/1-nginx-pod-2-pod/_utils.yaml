@@ -4,7 +4,7 @@ metadata:
   name: curl
   namespace: default
   labels:
-    name: curl
+    app: curl
 spec:
   containers:
   - name: curl
@@ -23,6 +23,8 @@ kind: Pod
 metadata:
   name: dnsutils
   namespace: default
+  labels:
+    app: dig
 spec:
   containers:
   - name: dnsutils

@@ -1,0 +1,8 @@
+kubectl apply -f .
+
+kubectl get pods,services
+
+kubectl exec dnsutils -- nslookup lab2-1-nginx-clusterip
+
+kubectl exec curl -- curl -s lab2-1-nginx-clusterip
+

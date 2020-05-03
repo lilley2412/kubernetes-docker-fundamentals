@@ -7,5 +7,5 @@ kubectl get nodes -o wide
 # ex: curl 192.168.64.4:30822/hithere
 curl <node-ip>:<node-port>
 
-kubectl exec curl -- curl -s nginx-pod-nodeport
+kubectl exec curl -- curl -s lab2-2-nginx-nodeport
 

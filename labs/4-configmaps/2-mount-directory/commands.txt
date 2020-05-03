@@ -1,0 +1,7 @@
+kubectl apply -f .
+
+kubectl get cm,svc
+
+kubectl exec curl -- curl -s lab4-2-nginx-clusterip
+
+kubectl exec curl -- curl -s lab4-2-nginx-clusterip/my-page.html
