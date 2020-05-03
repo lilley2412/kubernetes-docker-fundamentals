@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: lab3-1
+  name: lab4-1
   namespace: default
   labels:
-    name: lab3-1
-    app: lab3-1
-    lab: lab3-1
+    name: lab4-1
+    lab: lab4-1
 data:
   hello-plain-text.conf: |
     server {

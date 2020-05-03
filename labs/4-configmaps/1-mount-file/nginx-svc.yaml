@@ -1,17 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lab3-1
+  name: lab4-1
   namespace: default
   labels:
-    name: lab3-1
-    app: lab3-1
-    lab: lab3-1
+    name: lab4-1
+    lab: lab4-1
 spec:
   type: ClusterIP
   selector:
-    app: lab3-1
-    lab: lab3-1
+    lab: lab4-1
   ports:
   - port: 80
     targetPort: 80

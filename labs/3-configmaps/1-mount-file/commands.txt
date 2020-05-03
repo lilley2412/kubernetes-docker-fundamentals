@@ -1,9 +1,0 @@
-kubectl apply -Rf ../../2-services
-
-kubectl exec curl -- curl -s nginx-pod-nodeport
-
-kubectl apply -Rf .
-
-kubectl get cm lab3-1 -o yaml
-
-kubectl exec curl -- curl -s lab3-1

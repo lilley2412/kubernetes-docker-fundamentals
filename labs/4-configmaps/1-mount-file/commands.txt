@@ -1,0 +1,9 @@
+kubectl apply -Rf ../../2-services
+
+kubectl exec curl -- curl -s lab2-2
+
+kubectl apply -f .
+
+kubectl get cm lab4-1 -o yaml
+
+kubectl exec curl -- curl -s lab4-1

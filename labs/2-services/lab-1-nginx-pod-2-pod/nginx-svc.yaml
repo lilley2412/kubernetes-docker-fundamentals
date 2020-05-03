@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-pod
+  name: lab2-1
   namespace: default
   labels:
-    lab: svc-1-nginx-pod-2-pod
+    name: lab2-1
+    lab: lab2-1
 spec:
   type: ClusterIP
   selector:
-    app: nginx-pod
-    lab: svc-1-nginx-pod-2-pod
+    lab: lab2-1
   ports:
   - port: 80
     targetPort: 80

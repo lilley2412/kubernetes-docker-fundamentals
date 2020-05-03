@@ -1,4 +1,4 @@
-kubectl apply -f curl.yaml
+kubectl apply -f curl-pod.yaml
 
 kubectl get pods 
 

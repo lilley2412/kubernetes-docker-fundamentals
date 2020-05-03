@@ -1,7 +1,3 @@
-kubectl delete all -l lab 
-
-kubectl apply -f _prior_labs/.
-
 kubectl apply -f .
 
 kubectl get svc
