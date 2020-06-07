@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lab4-3-nginx-clusterip
+  namespace: default
+  labels:
+    lab: lab4-3
+spec:
+  type: ClusterIP
+  selector:
+    lab: lab4-3
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80

@@ -1,0 +1,7 @@
+kubectl apply -f .
+
+kubectl exec curl -- curl -s lab4-3-nginx-clusterip
+
+# edit env var
+
+kubectl apply -f .  # expected to fail

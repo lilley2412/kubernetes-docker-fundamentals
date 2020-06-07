@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lab4-4-env-vars
+  namespace: default
+  labels:
+    lab: lab4-4
+data:
+  MY_MESSAGE: this message is defined in a configmap
+  MY_GREETING: hello from configmap

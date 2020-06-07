@@ -1,0 +1,18 @@
+kubectl create secret tls lab5-1-tls --cert=tls.crt --key=tls.key
+kubectl label secret lab5-1-tls lab=lab5-1
+
+kubectl get secret lab5-1-tls
+
+kubectl get secret lab5-1-tls -o yaml
+
+kubectl get svc,pod -l lab=lab5-1
+
+# split view
+kubectl attach lab5-1-nginx
+
+# show http does not connect
+kubectl exec curl -- curl -s lab5-1-tls
+
+# show http does not connect (explain -k for cert)
+kubectl exec curl -- curl -sk https://lab5-1-tls
+
