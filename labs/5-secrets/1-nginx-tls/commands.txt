@@ -5,13 +5,15 @@ kubectl get secret lab5-1-tls
 
 kubectl get secret lab5-1-tls -o yaml
 
+kubectl apply -f .
+
 kubectl get svc,pod -l lab=lab5-1
 
 # split view
 kubectl attach lab5-1-nginx
 
 # show http does not connect
-kubectl exec curl -- curl -s lab5-1-tls
+kubectl exec curl -- curl -s http://lab5-1-tls:443
 
 # show http does not connect (explain -k for cert)
 kubectl exec curl -- curl -sk https://lab5-1-tls

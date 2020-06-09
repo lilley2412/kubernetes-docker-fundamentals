@@ -2,6 +2,3 @@ kubectl apply -f .
 
 kubectl exec curl -- curl -s lab4-4-nginx-clusterip
 
-# edit env var
-
-kubectl apply -f .  # expected to fail
