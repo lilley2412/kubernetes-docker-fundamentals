@@ -4,7 +4,7 @@ kubectl get svc
 
 kubectl get nodes -o wide
 
-# ex: curl 127.0.0.1:30100/hithere
+# ex: curl localhost:30100/hithere
 curl <node-ip>:<node-port>
 
 kubectl exec curl -- curl -s lab2-2-nginx-nodeport
