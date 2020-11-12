@@ -32,6 +32,8 @@ nodes:
     hostPort: 30104
   - containerPort: 30105
     hostPort: 30105
+- role: worker
+- role: worker
 EOF
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
